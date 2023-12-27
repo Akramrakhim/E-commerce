@@ -1,7 +1,37 @@
 /* ROOT */
 :root{
-
+  --text-color:#69707d;
+  --text-color-dark:#1d2026;
+  --accent-color:#ff7e1b;
+  --accent-color-hover:#ffab6a;
+  --accent-color-light:#ffeee2;
+  --light-bg:#f6f8fd;
+  --white-color:#fff;
+  --body-bg-color:#f2f2f2;
+  --divider-bg:#e4e9f2;
+  --font-family:"Kumbh Sans", "Arial", sans-serif;
 }
+
+/* FONTS FACE*/
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Bold.woff2") format('woff2'),
+    url("../fonts/KumbhSans-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("../fonts/KumbhSans-Regular.woff2") format('woff2'),
+    url("../fonts/KumbhSans-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 /* GLOBAL STYLE */
 html{
@@ -23,10 +53,10 @@ body{
   padding: 0;
   margin: 0;
   font-size: 16px;
-  line-height: 1.5;
-  font-family: "Arial", sans-serif;
-  background-color:#fff;
-  color: #222;
+  line-height: 26px;
+  font-family:var(--font-family);
+  background-color:var(--white-color);
+  color: var(--text-color);
 }
 
 a, li{
@@ -79,11 +109,30 @@ select:-webkit-autofill:focus {
 
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1148px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* LOGO */
+
+.logo {
+  display: inline-block;
+}
+.logo:hover{
+  opacity: 0.8;
+}
+.logo:active{
+  opacity: 0.6;
+}
+.logo__img {
+  display: block;
+  width: 137px;
+  height: 20px;
+  object-fit: contain;
+
 }
 
 /* MAIN-CONTENT */
@@ -92,10 +141,58 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
+/* SITE HEADER */
+.site-header {
+
+}
+.site-header__container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--divider-bg);
+}
+.site-header__logo {
+  flex-shrink: 0;
+  margin-right: 56px;
+}
 
 
+/* SITENAV */
+.sitenav {
+}
+.sitnav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.sitenav__item{
+  position: relative;
+  padding-top: 41px;
+  padding-bottom: 45px;
+}
+.sitenav__item:not(:last-child) {
+  margin-right: 32px;
+}
+.sitenav__link {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text-color);
+}
 
+.sitenav__link:hover{
+  color: var(--text-color-dark);
+}
 
+.sitenav__link:hover::after{
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  content: "";
+}
 
 
 
