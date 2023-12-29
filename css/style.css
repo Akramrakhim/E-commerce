@@ -177,13 +177,169 @@ select:-webkit-autofill:focus {
   content: "";
 }
 
-/* SITE HEADER */
-.site-header {
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  cursor:pointer;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  overflow: hidden;
+  border-radius:10px;
+  text-align: center;
+}
+
+.button--block{
+  display: flex;
+  width: 100%;
+}
+.button--wide{
+  min-width: 272px;
+}
+
+.button:hover{
+  background-color:var(--accent-color-hover);
+}
+.button:active{
+  transform: translateY(2px);
+}
+.button__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 22px 20px 18px;
+}
+.button__prepend {
+  margin-right: 16px;
+}
+
+
+/* SHOPING-CART-PRODUCTS */
+
+.shopping-cart-products {
+  margin: 0;
+  padding: 0;
+}
+.shopping-cart-products__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* ITEM-SHOPPING-CART-PRODUCTS */
+.item-shopping-cart-products {
+  display: flex;
+  align-items: center;
+}
+.item-shopping-cart-products__img {
+  flex-shrink: 0;
+  margin-right: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.item-shopping-cart-products__info {
+  flex-grow: 1;
+  width: 100%;
+  margin-right: 18px;
+  overflow: hidden;
+}
+
+.item-shopping-cart-products__name{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+.item-shopping-cart-products__subtotal{
+  color: var(--text-color-dark);
+}
+.item-shopping-cart-products__remove-button {
+  border:0;
+  padding: 0;
+  background-color:transparent;
+  align-self: center;
+  color: #c3cad9;
+  cursor: pointer;
+}
+
+.item-shopping-cart-products__remove-button:hover {
+  color: var(--accent-color);
+}
+
+.item-shopping-cart-products__remove-button:active {
+  opacity: 0.6;
+}
+
+.item-shopping-cart-products__remove-icon{
+  display: block;
+  width: 14px;
+  height: 16px;
 
 }
+
+/* SHOPPING-CART */
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 256px;
+  border-radius: 6px;
+  background-color: var(--white-color);
+}
+.shopping-cart--modal {
+  box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.50);
+}
+.shopping-cart__header {
+  padding: 24px 24px 27px;
+  border-bottom:1px solid var(--divider-bg)
+}
+.shopping-cart__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--text-color-dark);
+}
+.shopping-cart__inner {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  flex-grow: 1;
+}
+
+.shopping-cart__empty{
+  display: none;
+}
+
+.shopping-cart--empty .shopping-cart__empty{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.shopping-cart--empty .shopping-cart__content{
+  display: none;
+}
+
+.shopping-cart__products{
+  margin-bottom: 24px;
+}
+
+
+/* SITE HEADER */
 .site-header__container {
   display: flex;
   align-items: center;
+  position: relative;
   border-bottom: 1px solid var(--divider-bg);
 }
 .site-header__logo {
@@ -194,7 +350,10 @@ select:-webkit-autofill:focus {
 .site-header__sitenav{
   margin-right: auto;
 }
-
+.site-header__cart{
+  margin-right: 46px;
+  margin-left: 24px;
+}
 
 .site-header__cart-link {
   position: relative;
@@ -220,6 +379,11 @@ select:-webkit-autofill:focus {
   color: var(--white-color);
   border-radius: 7px;
 }
+
+.site-header__cart--empty .site-header__cart-product-count{
+  display: none;
+}
+
 .site-header__cart-icon {
   width: 22px;
   height: 20px;
@@ -227,8 +391,39 @@ select:-webkit-autofill:focus {
 }
 
 
+.site-header__profile-link {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  overflow: hidden;
+  border:2px solid transparent
+}
+.site-header__profile-link:active{
+  opacity: .6;
+}
+.site-header__profile-link:hover{
+  border:2px solid var(--accent-color);
+  border-radius: 50%;
+}
+.site-header__profile-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
 
 
+.site-header__cart-modal {
+  display: none;
+}
+
+.site-header__cart-modal--open {
+  position: absolute;
+  display: block;
+  width: 360px;
+  right: -76px;
+  top: 94px;
+}
 
 
 
