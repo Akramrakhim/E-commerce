@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
 </head>
 <body>
 
+  <!-- SITE HEADER -->
 <header class="site-header">
   <div class="container">
     <div class="site-header__container">
@@ -19,7 +20,7 @@
         </a>
           <!-- SITENAV -->
         <nav class="site-header__sitenav sitenav">
-          <ul class="sitnav__list">
+          <ul class="sitenav__list">
           <li class="sitenav__item">
             <a class="sitenav__link" href="#">Collections</a>
           </li>
@@ -63,7 +64,7 @@
               <ul class="shopping-cart__products shopping-cart-products">
                 <li class="shopping-cart-products__item">
                   <div class="item-shopping-cart-products">
-                    <img class="item-shopping-cart-products__img" src="img/hero-small-img.jpg" alt="fill limited edition Sneakers" width="50" height="50" srcset="img/hero-small-img.jpg 1x, img/hero-small-img@2x.jpg 2x">
+                    <img class="item-shopping-cart-products__img" src="img/shopping-cart-item-img.jpg" alt="fill limited edition Sneakers" width="50" height="50" srcset="img/shopping-cart-item-img.jpg 1x, img/shopping-cart-item-img@2x.jpg 2x">
                     <div class="item-shopping-cart-products__info">
                       <div class="item-shopping-cart-products__name">Fall Limited Edition Sneakers</div>
                       <div class="item-shopping-cart-products__cost">$125.00 x 3 <b class="item-shopping-cart-products__subtotal">$375.00</b></div>
@@ -103,7 +104,53 @@
 </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <main class="main-content">
+
+  <!-- PRODUCT PAGE -->
+  <div class="product-page">
+    <div class="container product-page__container">
+      <!-- PRODUCT PAGE GALLERY -->
+      <div class="product-page__gallery">
+        <!-- IMAGE SHOWCASE -->
+        <div class="img-showcase">
+          <div class="img-showcase-showcase">
+            <img class="img-showcase__active-img" src="img/Sneakers-1.jpg" alt="Fall Limited Edition Sneakers" width="445" height="445" srcset="img/Sneakers-1.jpg 1x, img/Sneakers-1.jpg@2x.jpg 2x">
+          </div>
+          
+          <ul class="img-showcase__thumbnails">
+            <li class="img-showcase__thumbnail img-showcase__thumbnail-active">
+              <button class="img-showcase__thumbnail-button js-img-showcase-thumbnail-button" type="button" aria-label="IMAGE 1" data-img-showcase-big="img/Sneakers-1.jpg" data-img-showcase-retina="img/Sneakers-1@2x.jpg">
+              <img class="img-showcase__img" src="img/Sneakers-1-thumbnail.jpg" alt="Fall Limited Edition Sneakers" srcset="img/Sneakers-1-thumbnail.jpg 1x, img/Sneakers-1-thumbnail@2x.jpg 2x" width="88" height="88">
+            </button>
+          </li>
+
+          <li class="img-showcase__thumbnail">
+            <button class="img-showcase__thumbnail-button js-img-showcase-thumbnail-button" type="button" aria-label="IMAGE 2" data-img-showcase-big="img/Sneakers-2.jpg" data-img-showcase-retina="img/Sneakers-2@2x.jpg">
+            <img class="img-showcase__img" src="img/Sneakers-2-thumbnail.jpg" alt="Fall Limited Edition Sneakers" srcset="img/Sneakers-2-thumbnail.jpg 1x, img/Sneakers-2-thumbnail@2x.jpg 2x" width="88" height="88">
+          </button>
+        </li> 
+
+        <li class="img-showcase__thumbnail">
+          <button class="img-showcase__thumbnail-button js-img-showcase-thumbnail-button" type="button" aria-label="IMAGE 3" data-img-showcase-big="img/Sneakers-3.jpg" data-img-showcase-retina="img/Sneakers-3@2x.jpg">
+          <img class="img-showcase__img" src="img/Sneakers-3-thumbnail.jpg" alt="Fall Limited Edition Sneakers" srcset="img/Sneakers-3-thumbnail.jpg 1x, img/Sneakers-3-thumbnail@2x.jpg 2x" width="88" height="88">
+        </button>
+      </li>
+
+      <li class="img-showcase__thumbnail">
+        <button class="img-showcase__thumbnail-button js-img-showcase-thumbnail-button" type="button" aria-label="IMAGE 4" data-img-showcase-big="img/Sneakers-4.jpg" data-img-showcase-retina="img/Sneakers-4@2x.jpg">
+        <img class="img-showcase__img" src="img/Sneakers-4-thumbnail.jpg" alt="Fall Limited Edition Sneakers" srcset="img/Sneakers-4-thumbnail.jpg 1x, img/Sneakers-4-thumbnail@2x.jpg 2x" width="88" height="88">
+      </button>
+    </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PRODUCT-PAGE__INFO -->
+      <div class="product-page__info">Info</div>
+    </div>
+  </div>
+
 
 </main>
 
@@ -111,3 +158,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+

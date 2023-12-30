@@ -142,7 +142,7 @@ select:-webkit-autofill:focus {
 }
 
 /* SITENAV */
-.sitnav__list {
+.sitenav__list {
   display: flex;
   padding: 0;
   margin: 0;
@@ -335,6 +335,89 @@ select:-webkit-autofill:focus {
 }
 
 
+/* IMAGE SHOWCASE */
+
+.img-showcase-showcase {
+  margin-bottom: 32px;
+}
+.img-showcase__active-img {
+  display: block;
+  width: 445px;
+  height: 455px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.img-showcase__thumbnails {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  overflow: auto;
+  /* Foreground, Background */
+  scrollbar-color: var(--accent-color) var(--divider-bg);
+}
+
+.img-showcase__thumbnails::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+}
+.img-showcase__thumbnails::-webkit-scrollbar-thumb { /* Foreground */
+  border-radius:5px;
+  background: var(--accent-color);
+}
+.img-showcase__thumbnails::-webkit-scrollbar-track { /* Background */
+  border-radius:5px;
+  background: var(--divider-bg);
+}
+
+.img-showcase__thumbnail{
+  flex-shrink: 0;
+}
+.img-showcase__thumbnail:not(:last-child) {
+  margin-right: 31px;
+}
+.img-showcase__thumbnail-button {
+  display: block;
+  position: relative;
+  padding: 0;
+  border:0;
+  border-radius:10px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+.img-showcase__thumbnail-button::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color:rgba(255, 255, 255, 0.5);
+  content: "";
+  opacity: 0;
+}
+.img-showcase__thumbnail-button:hover::after{
+  opacity: 1;
+}
+.img-showcase__thumbnail-button:active{
+  opacity: 0.6;
+}
+
+.img-showcase__thumbnail-active .img-showcase__thumbnail-button::after{  
+  opacity: 1;
+  border:2px solid var(--accent-color) ;
+    background-color:rgba(255, 255, 255, 0.75);
+  }
+
+.img-showcase__img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+}
+
 /* SITE HEADER */
 .site-header__container {
   display: flex;
@@ -426,10 +509,28 @@ select:-webkit-autofill:focus {
 }
 
 
+/* PRODUCT PAGE */
 
+.product-page {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
 
-
-
+.product-page__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1063px;
+}
+.product-page__gallery {
+  width: 100%;
+  max-width: 445px;
+  margin-right: 48px;
+}
+.product-page__info {
+  width: 100%;
+  max-width: 445px;
+}
 
 
 
